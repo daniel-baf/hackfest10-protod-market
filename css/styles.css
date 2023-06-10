@@ -1,10 +1,45 @@
+.header {
+  background-color: #94b66d;
+  color: #FFFFFF;
+  padding: 10px 0;
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+  color: #FFFFFF;
+  margin-left: 20px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #FFEB3B;
+}
+
 body{
     font: "Montserrat Alternates", sans-serif;
 }
 
 /* Cambiar el color de fondo del botón */
 .btn-primary {
-    background-color: rgb(135, 201, 201);
+    background-color: #8BC34A;
+  }
+
+  .btn-segundo {
+    background-color: #D2B48C;
+  }
+
+  .btn-tercero {
+    background-color: #FFFFFF;
+  }
+
+  .btn-cuarto {
+    background-color: #FFEB3B;
+  }
+
+  .btn-quinto {
+    background-color:  #FFCC80;
   }
   
   /* Cambiar el color del texto del botón */
@@ -48,3 +83,29 @@ body{
   width: 100%;
   height: 100%;
 }
+
+.footer__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__img {
+  width: 50px; /* Ajusta el valor según el tamaño deseado */
+  height:max-content; /* Mantén la proporción original */
+}
+
+.footer {
+  background-color: #94b66d;
+  color: #FFFFFF;
+  padding: 40px 0;
+}
+
+.footer a {
+  color: #FFFFFF;
+}
+
+.footer a:hover {
+  color: #FFEB3B;
+}
+
