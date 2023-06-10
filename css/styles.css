@@ -14,47 +14,16 @@
 }
 
 .navbar-nav .nav-link:hover {
-  color: #FFEB3B;
+  color: #FFCC80;
+}
+
+.dropdown-item:hover {
+  background-color: #FFCC80; /* Cambia el color de fondo al que desees */
 }
 
 body{
     font: "Montserrat Alternates", sans-serif;
 }
-
-/* Cambiar el color de fondo del botón */
-.btn-primary {
-    background-color: #8BC34A;
-  }
-
-  .btn-segundo {
-    background-color: #D2B48C;
-  }
-
-  .btn-tercero {
-    background-color: #FFFFFF;
-  }
-
-  .btn-cuarto {
-    background-color: #FFEB3B;
-  }
-
-  .btn-quinto {
-    background-color:  #FFCC80;
-  }
-  
-  /* Cambiar el color del texto del botón */
-  .btn-primary {
-    color: rgb(0, 0, 0);
-  }
-  
-  /* Agregar estilos personalizados al botón */
-  .btn-custom {
-    background-color: purple;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 10px 20px;
-    color: white;
-  }
 
 .carousel-item img {
     max-height: 570px; /* Ajusta el valor según tus necesidades */
