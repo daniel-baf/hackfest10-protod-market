@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página con Bootstrap</title>
+  <!-- Enlace al archivo CSS de Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap%22%3E">
+
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Mi Página Web</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Colabora con nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Mercados</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contactanos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+    </ol>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <button class="carousel-btn"><img src="./images/mercado.jpg" alt="Slide 3" class="d-block mx-auto"></button>
+        <!-- <div class="carousel-caption">
+          <h3>Slide 1</h3>
+          <p>Some description for Slide 1.</p>
+        </div> -->
+      </div>
+      <div class="carousel-item">
+        <button class="carousel-btn"><img src="./images/mercado2.jpg" alt="Slide 3" class="d-block mx-auto"></button>
+        <!-- <div class="carousel-caption">
+          <h3>Slide 2</h3>
+          <p>Some description for Slide 2.</p>
+        </div> -->
+      </div>
+      <div class="carousel-item">
+        
+        <button class="carousel-btn"><img src="./images/mercado3.jpg" alt="Slide 3" class="d-block mx-auto"></button>
+        <!-- <div class="carousel-caption">
+          <h3>Slide 3</h3>
+          <p>Some description for Slide 3.</p>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- Navigation controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <main class="container mt-4">
+    <h1>Bienvenido a mi página web</h1>
+    <p>Selecciona una opción:</p>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <a href="Trigales.html" class="btn btn-primary btn-block">Trigales</a>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <a href="Democracia.html" class="btn btn-primary btn-block">Democracia</a>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <a href="Terminal.html" class="btn btn-primary btn-block">Terminal</a>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <a href="lasFlores.html" class="btn btn-primary btn-block">Las Flores</a>
+      </div>
+    </div>
+  </main>
+
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Mercados
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <li><a class="dropdown-item" href="#">Mercado 1</a></li>
+      <li><a class="dropdown-item" href="#">Mercado 2</a></li>
+      <li><a class="dropdown-item" href="#">Mercado 3</a></li>
+    </ul>
+  </li>
+
+  <!-- Enlace al archivo JavaScript de Bootstrap 5 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
