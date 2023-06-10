@@ -9,6 +9,8 @@ crud = CRUD
 def start_method():  # put application's code here
     return 'main'
 
+if __name__ == "__main__":
+    app.run()
 
 @app.route("/insert", methods=['POST'])
 def insert_price():
@@ -16,8 +18,6 @@ def insert_price():
         market = request.values.get("market")
         if market is not None:
             path = f'/{market}'
-            # check stock, async function
-            print(crud.read(path))
 
             data = {
                 'product': request.values.get('product'),
@@ -72,6 +72,6 @@ def read_products():
                 response.update({f'item-{iter}': f'{_item[1]}'})
                 iter += 1
             return response
-        return abort(404)
+        return "hola"
     except:
         return abort(404)

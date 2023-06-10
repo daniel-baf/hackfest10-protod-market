@@ -1,7 +1,7 @@
 import firebase_admin
 from firebase_admin import credentials, db
 
-cred = credentials.Certificate("clave.json")
+cred = credentials.Certificate("./clave.json")
 firebase_admin.initialize_app(cred)
 
 # path = market, keyindex = col, valueIndex = value
@@ -32,18 +32,3 @@ def read(path: str):
 def create(path: str, obj: dict):
     ref = db.reference(path, None, "https://prueba-cf26f-default-rtdb.firebaseio.com/")
     ref.push().set(obj)
-
-
-data = {
-    'nombre': 'Jua',
-    'correo': 'Juan@goole.com',
-    'comentario': 'Hol'
-}
-
-# create(path='/comments', obj=data)
-
-# datos = read(path='/comments')
-# for _, comment in datos:
-#    print(f'{comment["correo"]}')
-#update(path='/comments', keyIndex="nombre", keyAim="correo", valueIndex="Juan", valueAim="Lopez@gmail.com")
-#delete(path='/comments', keyIndex="correo", valueIndex="Lopez@gmail.com")
