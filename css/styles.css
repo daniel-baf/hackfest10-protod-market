@@ -96,9 +96,9 @@ body{
   align-items: center;
 }
 
-.footer__img {
-  width: 50px; /* Ajusta el valor según el tamaño deseado */
-  height:max-content; /* Mantén la proporción original */
+.footer__img--small {
+  width: 35px;
+  height: 35px;
 }
 
 .footer {
