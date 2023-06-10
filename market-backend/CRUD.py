@@ -42,8 +42,8 @@ data = {
 
 # create(path='/comments', obj=data)
 
-datos = read(path='/comments')
-for _, comment in datos:
-    print(f'{comment["correo"]}')
+# datos = read(path='/comments')
+# for _, comment in datos:
+#    print(f'{comment["correo"]}')
 #update(path='/comments', keyIndex="nombre", keyAim="correo", valueIndex="Juan", valueAim="Lopez@gmail.com")
 #delete(path='/comments', keyIndex="correo", valueIndex="Lopez@gmail.com")
