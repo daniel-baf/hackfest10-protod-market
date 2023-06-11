@@ -27,14 +27,25 @@ function addElement(pName, price) {
 }
 
 window.addEventListener("DOMContentLoaded", (event) => {
-    request();
+    get_request();
 });
 
 
-const request = async() => {
-    console.log("init");
+const get_request = async() => {
     const response = await fetch(URI + 'read?market=democracia');
     const JSON = await response.json();
     console.log(JSON);
-    console.log("end");
 }   
+
+
+const userAction = async () => {
+    const response = await fetch('http://example.com/movies.json', {
+      method: 'POST',
+      body: myBody, // string or object
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    const myJson = await response.json(); //extract JSON from the http response
+    // do something with myJson
+  }
