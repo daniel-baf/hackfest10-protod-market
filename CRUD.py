@@ -19,6 +19,7 @@ cred = credentials.Certificate({
   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-cc2z5%40prueba-cf26f.iam.gserviceaccount.com",
   "universe_domain": "googleapis.com"
 })
+
 firebase_admin.initialize_app(cred)
 
 
@@ -79,6 +80,7 @@ def request_basic_market():
         data = json.load(file)
         file.close()
         return data
-    except:
+    except Exception as e:
         print("ERROR on JSON")
+        print(e)
         return "ERROR"
