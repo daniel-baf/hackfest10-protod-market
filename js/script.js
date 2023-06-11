@@ -1,10 +1,13 @@
+// automatically call backend on page load
+const URI = "http://localhost:5000/"
+
 function addElement(pName, price) {
     const newDiv = document.createElement("div");
     newDiv.className = "product"
 
     const img = document.createElement("img");
     img.src = "./images/logo_protod.png"
-    
+
     const title = document.createElement("h3");
     const titleContent = document.createTextNode(pName);
 
@@ -12,22 +15,37 @@ function addElement(pName, price) {
 
     const parrafo = document.createElement("p");
     const parrafoContent = document.createTextNode("El producto tiene el precio de Q" + price);
-  
+
     parrafo.appendChild(parrafoContent);
 
     newDiv.appendChild(img)
     newDiv.appendChild(title)
     newDiv.appendChild(parrafo);
-  
+
     const currentDiv = document.getElementById("product-grid");
     currentDiv.appendChild(newDiv);
 }
 
 window.addEventListener("DOMContentLoaded", (event) => {
-    var query = document.getElementById("product-grid");
-    console.log(query);
+    get_request();
+});
 
-    addElement("Frijoles", "50"); 
-      
-  });
 
+const get_request = async() => {
+    const response = await fetch(URI + 'read?market=democracia');
+    const JSON = await response.json();
+    console.log(JSON);
+}   
+
+
+const userAction = async () => {
+    const response = await fetch('http://example.com/movies.json', {
+      method: 'POST',
+      body: myBody, // string or object
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    const myJson = await response.json(); //extract JSON from the http response
+    // do something with myJson
+  }
