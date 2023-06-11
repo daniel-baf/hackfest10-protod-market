@@ -12,6 +12,8 @@
       align-items: center;
       height: 100vh;
       text-align: center;
+
+        max-height: 74vh;
     }
 
     .error-img {
@@ -35,5 +37,6 @@
     }
 
     .img-container img{
-        max-width: 150%;
+        /*max-width: 150%;*/
+        max-width: 60vb;
     }
