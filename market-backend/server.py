@@ -1,18 +1,33 @@
 from flask import *
 from flask_cors import CORS
+
 import CRUD
+from lib import HANDLER
 
 app = Flask(__name__)
 CORS(app)
+
 crud = CRUD
+handler = HANDLER
 
 
 @app.route('/')
-def start_method():  # put application's code here
-    return 'main'
+def start_method():  # put application's lib here
+    return render_template("index.html")
 
-if __name__ == "__main__":
-    app.run()
+
+@app.route("/market/<name>")
+def redirect_to_market_page(name):
+    # request data to FIREBASE AND DISPLAY IT
+    data = handler.request_market_prod_list(name)
+
+    # for _item_key, _item_data in data["items"].items():
+    #     price = _item_data["price"]
+    #     name = _item_data["product"]
+    #     print(f"Item: {_item_key}, Name: {name}, Price: {price}")
+    # return data
+    return render_template("market.html", data_struct=data)
+
 
 @app.route("/insert", methods=['POST'])
 def insert_price():
@@ -29,7 +44,7 @@ def insert_price():
             crud.create(path, data)
             return data
         return abort(404)
-    except:
+    except Exception:
         return abort(404)
 
 
@@ -63,17 +78,8 @@ def delete_product():
 
 @app.route('/read', methods=["GET"])
 def read_products():
-    try:
-        market = request.values.get("market")
-        if market is not None:
-            path = f'/{market}'
-            # get values and temporally insert
-            response = {}
-            iter = 0
-            for _item in crud.read(path):
-                response.update({f'item-{iter}': f'{_item[1]}'})
-                iter += 1
-            return response
-        return "hola"
-    except:
-        return abort(404)
+    return handler.request_market_prod_list(request.args.get("market"))
+
+
+if __name__ == "__main__":
+    app.run()
