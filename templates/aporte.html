@@ -23,7 +23,7 @@
 <body>
 
     <div class="aporte">
-      <form class="row g-3 needs-validation" id="aporte-form" novalidate>
+      <form class="row g-3 needs-validation" id="aporte-form" novalidate method="POST" action="/new-item">
         <div class="col-md-4">
           <label for="validationCustom01" class="form-label">Nombre</label>
           <input type="text" class="form-control" id="validationCustom01" required>
@@ -41,7 +41,7 @@
         <div class="col-md-4">
           <label class="form-label">Correo</label>
           <div class="input-group">
-            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <input type="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
             <div class="invalid-feedback">
               Correo Inválido
             </div>
@@ -49,7 +49,7 @@
         </div>
         <div class="col-md-3">
           <label for="validationCustom04" class="form-label">Mercado</label>
-          <select class="form-select" id="validationCustom04" required>
+          <select class="form-select" id="market-select" name="market-select" required>
             <option selected disabled value="">Elegir</option>
             <option value="trigales">Trigales</option>
             <option value="democracia">Democracia</option>
@@ -63,7 +63,7 @@
         <div class="col-md-3">
           </select>
           <label for="validationCustom05" class="form-label">Producto</label>
-          <select class="form-select" id="validationCustom04" required>
+          <select class="form-select" id="product-select" name="product-select" required>
             <option selected disabled value="">Elegir</option>
             {% for _item in market_produts.items() %}
             <option value="{{ _item[0] }}">{{ _item[1]["value"] }}</option>
@@ -75,7 +75,7 @@
         </div>
         <div class="col-md-3">
           <label for="validationCustom06" class="form-label">Precio del producto (Quetzales)</label>
-          <input type="text" class="form-control" id="validationCustom05" required>
+          <input type="number" class="form-control" id="input-price" name="input-price" required>
           <div class="invalid-feedback">
               Inserte un precio
           </div>

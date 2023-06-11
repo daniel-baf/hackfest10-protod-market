@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, abort
 from flask_cors import CORS
 
 import CRUD
@@ -17,13 +17,6 @@ def main():  # put application's code here
 def redirect_to_aporte():  # put application's code here
     # request basic data for select
     basket_list = crud.request_basic_market()
-    for _item in basket_list.items():
-        # for _item_key, _item_data in _item.items():
-        _item_key = _item[0]
-        _item_value = _item[1]["value"]
-        _item_price = _item[1]["price"]
-
-        # print(f'key {_item_key} value {_item_value} price {_item_price}')
     return render_template("aporte.html", market_produts=basket_list)
 
 
@@ -33,22 +26,28 @@ def redirect_to_market_page(market_name):
     data = crud.request_market_prod_list(market_name)
     return render_template("market.html", data_struct=data)
 
-@app.route("/new-item/", methods=["POST"])
+@app.route("/new-item", methods=["POST"])
 def insert_product():
     try:
-        market = request.values.get("market")
-        if market is not None:
-            path = f'/{market}'
+        _market = request.values.get("market-select")
+        
+        # return(_market + "<br>" + request.values.get("product-select") + "<br>" + request.values.get("input-price"))
+
+        if _market is not None:
+            path = f'/{_market}'
             data = {
-                'product': request.values.get('product'),
-                'price': request.values.get('price'),
+                'product': request.values.get("product-select"),
+                'price': request.values.get("input-price"),
             }
-            # get values and temporally insert
             crud.create(path, data)
-            return data
+            return "insertado"
+        print("hola")
         return abort(404)
-    except Exception:
+    except Exception as e:
+        print("adios")
+        print(e)
         return abort(404)
+
 
 
 if __name__ == '__main__':
