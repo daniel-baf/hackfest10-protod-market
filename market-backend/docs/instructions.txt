@@ -13,6 +13,7 @@ templates folder
 DEPENDENCIES
 PATH: (venv) [current_path]$
 ~$ python -m pip install flask
+~$ pip install -U flask-cors
 ~$ pip install --upgrade pip
 ~$ export FLASK_APP=server.py
 ~$ export FLASK_ENV=development
