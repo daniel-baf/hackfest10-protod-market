@@ -43,6 +43,7 @@ def insert_product():
             crud.create(path, data)
             return "insertado"
         return abort(404)
+
     except Exception as e:
         print(e)
         return abort(404)
