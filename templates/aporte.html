@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APORTE|PRECIO DE PRODUCTO</title>
+  <!-- Enlace al archivo CSS de Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="stylesheet" href="/static/css/aporte.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap">
+</head>
+
+<style>
+  body {
+    font-family: 'Montserrat Alternates', sans-serif;
+  }
+</style>
+
+{% include "header.html" %}
+
+<body>
+
+    <div class="aporte">
+      <form class="row g-3 needs-validation" id="aporte-form" novalidate>
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="validationCustom01" required>
+          <div class="invalid-feedback">
+              Inserte su nombre
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="validationCustom02" required>
+          <div class="invalid-feedback">
+              Inserte su apellido
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Correo</label>
+          <div class="input-group">
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Correo Inválido
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label">Producto</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Elegir</option>
+            <option>Frijol</option>
+            <option>Tortillas</option>
+          </select>
+          <div class="invalid-feedback">
+            Seleccione un producto
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label">Precio del producto (Quetzales)</label>
+          <input type="text" class="form-control" id="validationCustom05" required>
+          <div class="invalid-feedback">
+              Inserte un precio
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Subir aporte</button>
+        </div>
+      </form>
+    </div>
+</body>
+
+{% include "footer.html" %}
+
+</html>
