@@ -1,12 +1,115 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página 3</title>
+  <title>MERCADO|TERMINAL</title>
+  <!-- Enlace al archivo CSS de Bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/mercados_styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap">
 </head>
+
+<style>
+  body {
+    font-family: 'Montserrat Alternates', sans-serif;
+  }
+</style>
+
 <body>
-  <h1>Página 3</h1>
-  <!-- Contenido adicional de la página -->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">QuetzalCompara</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aporte.html">Colabora con nosotros</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Mercados
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="trigales.html">Trigales</a></li>
+                <li><a class="dropdown-item" href="democracia.html">Democracia</a></li>
+                <li><a class="dropdown-item" href="lasFlores.html">Las Flores</a></li>
+                <li><a class="dropdown-item" href="terminal.html">Terminal</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contáctanos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <h1 class="hero__title"><strong>MERCADO LA TERMINAL</strong></h1>
+  <div class="product-grid" id="product-grid">
+    <div class="product">
+      <img src="./images/p1.png" alt="Product 1">
+      <h3>Bananos</h3>
+      <p>El producto tiene el precio de Q50.00</p>
+    </div>
+    
+    <div class="product">
+      <img src="./images/logo_protod.png" alt="Product 2">
+      <h3>Huevos</h3>
+      <p>El producto tiene el precio de Q500.00</p>
+    </div>
+    
+    <div class="product">
+      <img src="./images/logo_protod.png" alt="Product 3">
+      <h3>Tortillas</h3>
+      <p>El producto tiene el precio de Q5.00</p>
+    </div>
+
+    <div class="product">
+      <img src="./images/logo_protod.png" alt="Product 4">
+      <h3>Tortillas</h3>
+      <p>El producto tiene el precio de Q5.00</p>
+    </div>
+    
+    <!-- Add more product elements as needed -->
+  </div>
+  
+
+  <!-- Enlace al archivo JavaScript de Bootstrap 5 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/script.js"></script>
 </body>
+
+<footer class="footer">
+  <section class="footer__container" id="contacto">
+    <nav class="nav nav--footer">
+      <h2 class="footer__title">Contáctanos:</h2>
+      <div class="footer__title">
+        <a href="https://www.facebook.com/profile.php?id=100082415299149" class="footer__icons">
+          <img src="./images/facebook_logo.png" class="footer__img">
+        </a>
+        <a href="https://www.instagram.com/Protod_Xela/" class="footer__icons">
+          <img src="./images/instagram_logo.png" class="footer_img footer_img--small">
+        </a>
+      </div>
+    </nav>
+  </section>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p class="text-white">© 2023 Protod. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </html>

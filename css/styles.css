@@ -23,6 +23,7 @@
 
 body{
     font: "Montserrat Alternates", sans-serif;
+    height: 100%;
 }
 
 .carousel-item img {
@@ -82,5 +83,10 @@ body{
 
 .footer a:hover {
   color: #FFEB3B;
+}
+
+.footer_img--small {
+  width: 35px;
+  height: 35px;
 }
 
