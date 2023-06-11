@@ -48,18 +48,33 @@
           </div>
         </div>
         <div class="col-md-3">
-          <label for="validationCustom04" class="form-label">Producto</label>
+          <label for="validationCustom04" class="form-label">Mercado</label>
           <select class="form-select" id="validationCustom04" required>
             <option selected disabled value="">Elegir</option>
-            <option>Frijol</option>
-            <option>Tortillas</option>
+            <option value="trigales">Trigales</option>
+            <option value="democracia">Democracia</option>
+            <option value="las-flores">Las Flores</option>
+            <option value="terminal">Terminal</option>
           </select>
           <div class="invalid-feedback">
             Seleccione un producto
           </div>
         </div>
         <div class="col-md-3">
-          <label for="validationCustom05" class="form-label">Precio del producto (Quetzales)</label>
+          </select>
+          <label for="validationCustom05" class="form-label">Producto</label>
+          <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Elegir</option>
+            {% for _item in market_produts.items() %}
+            <option value="{{ _item[0] }}">{{ _item[1]["value"] }}</option>
+            {% endfor %}
+          </select>
+          <div class="invalid-feedback">
+            Seleccione un producto
+          </div>
+        </div>
+        <div class="col-md-3">
+          <label for="validationCustom06" class="form-label">Precio del producto (Quetzales)</label>
           <input type="text" class="form-control" id="validationCustom05" required>
           <div class="invalid-feedback">
               Inserte un precio

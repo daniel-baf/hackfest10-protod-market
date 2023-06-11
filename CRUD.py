@@ -1,4 +1,6 @@
 import firebase_admin
+import json
+
 from firebase_admin import credentials, db
 
 # /////////////////////////////////////
@@ -57,3 +59,14 @@ def request_market_prod_list(market):
         return data
     except Exception:
         return "unable to connect to firebase"
+
+
+def request_basic_market():
+    try:
+        file = open('./basket.json')
+        data = json.load(file)
+        file.close()
+        return data
+    except:
+        print("ERROR on JSON")
+        return "ERROR"
