@@ -1,0 +1,82 @@
+{
+  "acet_veg": {
+    "value": "Aceite Vegetal",
+    "price": 12
+  },
+  "arroz": {
+    "value": "Arroz",
+    "price": 5
+  },
+  "azucar": {
+    "value": "Azúcar",
+    "price": 3
+  },
+  "cafe": {
+    "value": "Café",
+    "price": 8
+  },
+  "frijol": {
+    "value": "Frijol",
+    "price": 6
+  },
+  "harina": {
+    "value": "Harina",
+    "price": 4
+  },
+  "leche": {
+    "value": "Leche",
+    "price": 3
+  },
+  "pan": {
+    "value": "Pan",
+    "price": 2
+  },
+  "sal": {
+    "value": "Sal",
+    "price": 1
+  },
+  "aceite": {
+    "value": "Aceite",
+    "price": 10
+  },
+  "pollo": {
+    "value": "Pollo",
+    "price": 15
+  },
+  "carne": {
+    "value": "Carne",
+    "price": 20
+  },
+  "pasta": {
+    "value": "Pasta",
+    "price": 4
+  },
+  "atun": {
+    "value": "Atún",
+    "price": 2
+  },
+  "huevos": {
+    "value": "Huevos",
+    "price": 5
+  },
+  "papa": {
+    "value": "Papa",
+    "price": 3
+  },
+  "cebolla": {
+    "value": "Cebolla",
+    "price": 2
+  },
+  "tomate": {
+    "value": "Tomate",
+    "price": 3
+  },
+  "zanahoria": {
+    "value": "Zanahoria",
+    "price": 2
+  },
+  "platano": {
+    "value": "Plátano",
+    "price": 2
+  }
+}
