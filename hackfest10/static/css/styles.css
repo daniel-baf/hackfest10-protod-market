@@ -17,9 +17,9 @@
     color: #FFEB3B;
 }
 
-body {
-    font: "Montserrat Alternates", sans-serif;
-}
+  body {
+    font-family: 'Montserrat Alternates', sans-serif;
+  }
 
 /* Cambiar el color de fondo del botón */
 .btn-primary {
@@ -99,6 +99,7 @@ body {
     background-color: #94b66d;
     color: #FFFFFF;
     padding: 40px 0;
+    vertical-align: bottom;
 }
 
 .footer a {

@@ -10,7 +10,12 @@ CORS(app)
 
 @app.route('/')
 def main():  # put application's code here
-    return render_template("index.html")\
+    return render_template("index.html")
+
+
+@app.route('/404')
+def redirect_to_404():
+    return render_template("404.html")
 
 @app.route('/colab')
 def redirect_to_aporte():  # put application's code here
