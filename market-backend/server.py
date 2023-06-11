@@ -1,7 +1,9 @@
 from flask import *
+from flask_cors import CORS
 import CRUD
 
 app = Flask(__name__)
+CORS(app)
 crud = CRUD
 
 

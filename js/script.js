@@ -1,20 +1,6 @@
 // automatically call backend on page load
 const URI = "http://localhost:5000/"
 
-// request list from backend
-async function get_product_list() {
-    console.log("calling");
-    const result = await request_data('democracia');
-}
-
-// HTTP requests
-function request_data(market) {
-    fetch(URI + "read?market=" + market)
-        .then((response) => response.json())
-        .then((json) => console.log(json));
-}
-
-
 function addElement(pName, price) {
     const newDiv = document.createElement("div");
     newDiv.className = "product"
@@ -41,10 +27,14 @@ function addElement(pName, price) {
 }
 
 window.addEventListener("DOMContentLoaded", (event) => {
-    // var query = document.getElementById("product-grid");
-    // console.log(query);
-    // 
-    // addElement("Frijoles", "50"); 
-    get_product_list();
+    request();
 });
 
+
+const request = async() => {
+    console.log("init");
+    const response = await fetch(URI + 'read?market=democracia');
+    const JSON = await response.json();
+    console.log(JSON);
+    console.log("end");
+}   
