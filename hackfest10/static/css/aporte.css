@@ -29,12 +29,24 @@ body {
 }
 
 .btn-primary{
-  background-color: rgb(255, 255, 255);
+
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #94b66d;
+  color: #FFFFFF;
   border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+/*4CAF50*/
 .btn-primary:hover {
-  background-color: #94b66d; /* Cambia el color de fondo al que desees */
+  background-color: #D2B48C; /* Cambia el color de fondo al que desees */
 }
 
 
