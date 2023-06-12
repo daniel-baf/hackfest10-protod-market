@@ -1,12 +1,14 @@
 import firebase_admin
 import json
+import os
 
 from firebase_admin import credentials, db
 
 # /////////////////////////////////////
 # ///////////// FIREBASE /////////////
 # /////////////////////////////////////
-cred = credentials.Certificate("./clave.json")
+cred = credentials.Certificate(f'{os.path.dirname(os.path.realpath(__file__))}/clave.json')
+
 firebase_admin.initialize_app(cred)
 
 
@@ -45,14 +47,13 @@ def create(path: str, obj: dict):
 # /////////////////////////////////////
 def request_market_prod_list(market):
     data = {"market": market, "items": {}}
-
     try:
         if market is not None:
             path = f'/{market}'
             _iter = 0
             for _item in read(path):
                 try:
-                    data["items"][f'item-{_iter}'] = {"product": _item[1]["product"], "price": _item[1]["price"]}
+                    data["items"][f'item-{_iter}'] = {"img": _item[1]["img"], "product": _item[1]["product"], "price": _item[1]["price"]}
                     _iter += 1
                 except Exception:  # do nothing
                     print("error on loop")
@@ -63,10 +64,11 @@ def request_market_prod_list(market):
 
 def request_basic_market():
     try:
-        file = open('./basket.json')
+        file = open(f'{os.path.dirname(os.path.realpath(__file__))}/basket.json')
         data = json.load(file)
         file.close()
         return data
-    except:
+    except Exception as e:
         print("ERROR on JSON")
+        print(e)
         return "ERROR"

@@ -36,15 +36,15 @@ def insert_product():
         if _market is not None:
             path = f'/{_market}'
             data = {
+                # 'img' : request.values.get(),
                 'product': request.values.get("product-select"),
                 'price': request.values.get("input-price"),
             }
             crud.create(path, data)
             return "insertado"
-        print("hola")
         return abort(404)
+
     except Exception as e:
-        print("adios")
         print(e)
         return abort(404)
 
