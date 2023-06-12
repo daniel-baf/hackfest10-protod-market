@@ -26,12 +26,22 @@
 <div class="product-grid" id="product-grid">
     {% for _item_key, _item_data in data_struct["items"].items() %}
         <div class="product">
-            <img src="../static/imgs/p1.png" alt="product {{ _item_data["product"] }}">
+            <img src="{{ _item_data['img'] }}" alt="img">
+            <h3>{{ _item_data["product"] }}</h3>
+            <p>El producto tiene un precio de Q{{ _item_data["price"] }}</p>
+        </div>
+    {% endfor %}
+</div>
+
+<!-- <div class="product-grid" id="product-grid">
+    {% for _item_key, _item_data in data_struct["items"].items() %}
+        <div class="product">
+            <img src={_item_data["img]} alt="product {_item_data[img]}">
             <h3>{{ _item_data["product"] }}</h3>
             <p>El producto tiene el precio de Q{{ _item_data["price"] }}</p>
         </div>
     {% endfor %}
-</div>
+</div> -->
 
 
 <!-- Enlace al archivo JavaScript de Bootstrap 5 -->
