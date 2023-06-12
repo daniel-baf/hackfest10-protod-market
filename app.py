@@ -43,6 +43,7 @@ def insert_product():
             crud.create(path, data)
             return redirect_to_market_page(_market)
         return abort(404)
+
     except Exception as e:
         print(e)
         return abort(404)
