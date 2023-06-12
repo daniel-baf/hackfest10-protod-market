@@ -12,7 +12,7 @@ El proyecto se ha desarrollado utilizando las siguientes tecnologías:
 
 - **HTML5**: Lenguaje de marcado utilizado para estructurar y presentar el contenido del proyecto.
 - **CSS**: Lenguaje de estilos utilizado para dar estilo y diseño a la interfaz de usuario.
-- **Bootstrap**: Framework CSS utilizado para crear una interfaz web receptiva y atractiva.
+- **Bootstrap**: Framework CSS y HTML utilizado para crear una interfaz web receptiva y atractiva.
 - **Python 3.9 y superiores**: Lenguaje de programación utilizado para la lógica del servidor y la manipulación de datos.
 - **Flask**: Framework de Python utilizado para desarrollar el servidor web y las rutas de la aplicación.
 - **Firebase**: Plataforma en la nube utilizada para almacenar y administrar la base de datos del proyecto.
