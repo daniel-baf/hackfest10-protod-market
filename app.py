@@ -41,7 +41,7 @@ def insert_product():
                 'price': request.values.get("input-price"),
             }
             crud.create(path, data)
-            return "insertado"
+            return redirect_to_market_page(_market)
         return abort(404)
     except Exception as e:
         print(e)
