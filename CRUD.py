@@ -53,7 +53,7 @@ def request_market_prod_list(market):
             _iter = 0
             for _item in read(path):
                 try:
-                    data["items"][f'item-{_iter}'] = {"img": _item[1]["img"], "product": _item[1]["product"], "price": _item[1]["price"]}
+                    data["items"][f'item-{_iter}'] = {`"img": _item[1]["img"], "product": _item[1]["product"], "price": _item[1]["price"]}
                     _iter += 1
                 except Exception:  # do nothing
                     print("error on loop")
