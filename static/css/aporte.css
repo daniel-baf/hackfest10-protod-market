@@ -52,6 +52,7 @@ body {
 
 .aporte {
   background-color: rgb(255, 255, 255);
+  min-width: 60vb;
   width: 65%;
   padding: 30px;
   margin: auto;
