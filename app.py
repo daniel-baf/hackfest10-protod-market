@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, abort
 from flask_cors import CORS
-
 import CRUD
 
 app = Flask(__name__, static_folder='static')
